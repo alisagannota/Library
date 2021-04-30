@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="https://use.typekit.net/iwd6yql.css">
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" type="text/javascript" charset="utf-8" defer></script>
+  </head>
+  <body >
+      <div id="header">
+          <h1>VIRTUAL LIBRARY</h1>
+      </div>
+     
+
+
+      <div class="clock">
+
+        <div class="hour">
+            <div class="hr" id="hr">
+                
+            </div>
+        </div>
+
+        <div class="min">
+            <div class="mn" id="mn">
+
+            </div>
+        </div>
+
+        <div class="sec">
+            <div class="sc" id="sc">
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div>
+        <h2>12</h2>
+        <h2>3</h2>
+        <h2>6</h2>
+        <h2>9</h2>
+    </div> -->
+
+      <div id="noise">
+          <button id="mute"> <img src="volume.png" alt="volume icon" id="volume"> </button>
+          <p>keyboard </p>
+          <audio src="/sound/keyboard.mp3" id="keyboard"></audio>
+          <input type="range" id="volume-control1" class="slider" onclick="audioPlay()" min="0" max="100" value="100" step="1">
+
+          <p>steps </p>
+          <input type="range" id="volume-control2" class="slider">
+          <p>paper rustling </p>
+          <input type="range" id="volume-control3" class="slider">
+          <p>whispers </p>
+          <input type="range" id="volume-control4" class="slider">
+          <p>water fountain </p>
+          <input type="range" id="volume-control5" class="slider">
+    </div>
+
+    <!-- <div id="footer">
+        <h1> 09:42:34 TUE 2021</h1>
+    </div> -->
+
+  </body>
+</html>

@@ -1,0 +1,161 @@
+body,html {
+    font-family: Helvetica, sans-serif;
+    overflow: hidden;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 10% 80% 10%;
+    width:100vw;
+    height: 100vh;
+    grid-template-areas: 
+    "header header header header" 
+    "main main . sidebar"
+    "footer footer footer footer";
+}
+
+#header {
+    text-align: center;
+    font-size: 2rem;
+    margin: -2rem;
+    grid-area: header;
+    border-bottom: 0.4rem solid rgb(255, 123, 0);
+    margin-bottom: 0;
+    font-family: bely, serif;
+}
+
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    grid-area: main;
+    align-self: center;
+    justify-self: center;
+    margin-top:-5rem;
+    filter: drop-shadow(2rem 1rem 0.3rem rgba(128, 128, 128, 0.637));
+}
+
+
+/* The small circle int the center */
+.clock:before {
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5em;
+    /* background: rgb(0, 0, 0); */
+    background: rgb(255, 123, 0);
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+    position: absolute;
+}
+
+/* length of respective arms; */
+.clock .hour, .hr {
+    height: 2rem;
+} 
+
+.clock .min, .mn {
+    height: 2rem;
+}
+
+.clock .sec, .sc {
+    height: 5rem;
+}
+
+
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    
+}
+
+
+.hr:before {
+    content: '';
+    position: absolute;
+    width: 0.8rem;
+    height: 18rem;
+    background: #000000;
+    border-radius: 2.8px;
+}
+
+.mn:before {
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 30rem;
+    background: #000000;
+    border-radius: 0.2rem;
+}
+
+
+
+.sc:before {
+    content: '';
+    position: absolute;
+    width: 0.2rem;
+    height: 35rem;
+    background: #00000080;
+    border-radius: 0.2rem;
+}
+
+
+#noise {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-right: 4rem;
+    grid-area: sidebar;
+    align-self: center;
+    font-family: bely, serif;
+}
+
+#volume {
+    width: 2rem;
+}
+
+#mute {
+    border: none;
+    background: url('volume.png') no-repeat;
+    margin-left: 12rem;
+    
+}
+
+.slider {
+    /* filter: grayscale(100%); */
+    -webkit-appearance: none;
+    width: 15rem;
+    height: 0.4rem;
+    border-radius: 1rem;
+    /* background: rgb(88, 88, 88); */
+    background: rgb(255, 123, 0);
+    outline: none;
+
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: white;
+    filter: drop-shadow(0.2rem 0.2rem 0.5rem gray);
+    cursor: pointer;
+}
+
+/* 
+#footer {
+    grid-area: footer;
+    align-self: baseline;
+    border-top: 0.4rem solid black;
+} */
