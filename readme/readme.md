@@ -1,6 +1,8 @@
 # Goals
 
-1. I want to have the "type=range" sliders correspond with audio files to adjust the volume of them individually. I created the sliders themsleves and formatted them. Now, I am trying to figure out what is the best way to code that interaction. I started to experiment with JS to see if that would work but I still haven't been able to figure that out. *(Update: I think I kind of figured it out, will ahve to test properly later)*
+1. I want to have the "type=range" sliders correspond with audio files to adjust the volume of them individually. I created the sliders themsleves and formatted them. Now, I am trying to figure out what is the best way to code that interaction. I started to experiment with JS to see if that would work but I still haven't been able to figure that out. 
+*(Update: I think I kind of figured it out, will ahve to test properly later)*
+*(Update 2: only works on my computer :( )*
 
 2. After that, I'll have to see if the layering of sounds works.
 
