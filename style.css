@@ -20,6 +20,7 @@ body,html {
     border-bottom: 0.4rem solid rgb(255, 123, 0);
     margin-bottom: 0;
     font-family: bely, serif;
+    z-index: 9;
 }
 
 
@@ -116,16 +117,15 @@ body,html {
     align-self: center;
     font-family: bely, serif;
     z-index: 10;
+    /* background-image: url("../images/unmute.png"); */
 }
 
 #volume {
     /* border: none; */
-    background: url(images/unmute.png) no-repeat;
-    /* background-color: orange; */
-    /* margin-left: 12rem; */
+    background-image: url("../images/unmute.png");
+    margin-left: 12rem;
     width: 2rem;
     height: 2rem;
-    margin:5rem;
 }
 
 .slider {

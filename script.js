@@ -18,27 +18,25 @@ setInterval(() => {
     mn.style.transform = `rotateZ(${mm}deg)`;
     sc.style.transform = `rotateZ(${ss}deg)`;
 });
+
+
 // Mute/Unmute button
-// let mute= document.querySelector('#mute');
-// let unmute= document.querySelector('#unmute');
 
-// function switchSigns() {
-//     document.querySelector('#mute').className = "hidden";
-//     document.querySelector('#unmute').className = "hidden";
-// }
+let volumeButton = document.getElementById ("volume");
+let audio = document.querySelectorAll (".audio");
+// let audio = (audioKeyboard, audioSteps, audioWriting, audioWhispers, audioWater);
 
-// function volumeFunction1() {
-//     switchSigns();
-//     unmute.className === "hidden"
-//       ? (unmute.className = "volume")
-//       : (unmute.className = "hidden");
-// }
-// function volumeFunction2() {
-//     switchSigns();
-//     mute.className === "hidden"
-//       ? (mute.className = "volume")
-//       : (mute.className = "hidden");
-// }
+volumeButton.addEventListener("click", mute);
+
+function mute(){
+    if(audio.muted){
+        audio.muted = false;
+        volumeButton.style.background = "url(images/unmute.png) no-repeat";
+    } else {
+        audio.muted = true;
+        volumeButton.style.background = "url(images/mute.png) no-repeat";
+    }
+}
 
 
 // Sound Bars
@@ -112,20 +110,3 @@ function setVolume5(){
     audioWater.volume = volumeSlider5.value / 100;
 }
 
-// mute button
-
-let volumeButton = document.getElementById ("volume");
-let audio = document.querySelectorAll (".audio");
-// let audio = (audioKeyboard, audioSteps, audioWriting, audioWhispers, audioWater);
-
-volumeButton.addEventListener("click", mute);
-
-function mute(){
-    if(audio.muted){
-        audio.muted = false;
-        volumeButton.style.background = "url(images/unmute.png) no-repeat";
-    } else {
-        audio.muted = true;
-        volumeButton.style.background = "url(images/mute.png) no-repeat";
-    }
-}
