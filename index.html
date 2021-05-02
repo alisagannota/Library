@@ -36,28 +36,31 @@
 
             </div>
         </div>
-
-    </div>
+      </div>
 
       <div id="noise">
-          <button id="mute"> <img src="volume.png" alt="volume icon" id="volume"> </button>
-          <p>keyboard </p>
-          <audio src="sound/keyboard.mp3" id="keyboard"></audio>
-          <input type="range" id="volume-control1" class="slider" onclick="audioPlay()" min="0" max="100" value="100" step="1">
+           <button id="volume"></button>
 
-          <p>steps </p>
-          <input type="range" id="volume-control2" class="slider">
-          <p>paper rustling </p>
-          <input type="range" id="volume-control3" class="slider">
-          <p>whispers </p>
-          <input type="range" id="volume-control4" class="slider">
-          <p>water fountain </p>
-          <input type="range" id="volume-control5" class="slider">
+          <p>keyboard</p>
+          <audio src="sound/keyboard.mp3" id="keyboard" class="audio"></audio>
+          <input type="range" id="volume-control1" class="slider" onclick="audioPlay1()" min="0" max="100" value="100" step="1">
+          
+          <p>steps</p>
+          <audio src="sound/steps.mp3" id="steps" class="audio"></audio>
+          <input type="range" id="volume-control2" class="slider" onclick="audioPlay2()" min="0" max="100" value="100" step="1">
+
+          <p>writing</p>
+          <audio src="sound/writing.mp3" id="writing" class="audio"></audio>
+          <input type="range" id="volume-control3" class="slider" onclick="audioPlay3()" min="0" max="100" value="100" step="1">
+
+          <p>whispers</p>
+          <audio src="sound/whispers.mp3" id="whispers" class="audio"></audio>
+          <input type="range" id="volume-control4" class="slider" onclick="audioPlay4()" min="0" max="100" value="100" step="1">
+
+          <audio src="sound/water.mp3" id="water" class="audio"></audio>
+          <p>water fountain</p>
+          <input type="range" id="volume-control5" class="slider" onclick="audioPlay5()" min="0" max="100" value="100" step="1">
     </div>
-
-    <!-- <div id="footer">
-        <h1> 09:42:34 TUE 2021</h1>
-    </div> -->
-
+    
   </body>
 </html>
