@@ -1,3 +1,7 @@
+:root {
+    --main-color: rgb(255, 123, 0); 
+    /* --main-color: rgb(126, 106, 102);  */
+}
 body,html {
     overflow: hidden;
     margin: 0;
@@ -12,18 +16,32 @@ body,html {
     "footer footer footer footer";
 }
 
+#image {
+    background: url("clock.png");
+    margin-left: 2rem;
+    margin-top: -7rem;
+    width: 110vw;
+    height: 112vh;
+    position: absolute;
+    z-index: 1;
+}
 #header {
-    text-align: center;
+    text-align: left;
     font-size: 2rem;
-    margin: -2rem;
+    margin-top: -1rem;
+    margin-left: 3rem;
     grid-area: header;
-    border-bottom: 0.4rem solid rgb(255, 123, 0);
+    /* border-bottom: 0.4rem solid var(--main-color); */
     margin-bottom: 0;
     font-family: bely, serif;
     z-index: 9;
 }
 
-
+#info {
+    font-size: 1.5rem;
+    margin-left: 7rem;
+    margin-top: -2.5rem;
+}
 .clock {
     width: 30rem;
     height: 30rem;
@@ -36,6 +54,7 @@ body,html {
     justify-self: center;
     margin-top:-5rem;
     filter: drop-shadow(2rem 1rem 0.3rem rgba(128, 128, 128, 0.637));
+    z-index: 11;
 }
 
 
@@ -45,9 +64,9 @@ body,html {
     position: absolute;
     width: 1.5rem;
     height: 1.5em;
-    background: rgb(255, 123, 0);
+    background: var(--main-color);
     border-radius: 50%;
-    z-index: 5;
+    z-index: 12;
 }
 
 .clock .hour,
@@ -114,18 +133,20 @@ body,html {
     text-align: center;
     margin-right: 4rem;
     grid-area: sidebar;
-    align-self: center;
+    align-self:flex-end;
     font-family: bely, serif;
     z-index: 10;
-    /* background-image: url("../images/unmute.png"); */
+    background-color: rgba(255, 255, 255, 0.863);
 }
 
 #volume {
-    /* border: none; */
-    background-image: url("../images/unmute.png");
+    border: none;
+    background: url("../images/unmute.png");
+    background-size: cover;
     margin-left: 12rem;
     width: 2rem;
     height: 2rem;
+    z-index: 100;
 }
 
 .slider {
@@ -133,8 +154,8 @@ body,html {
     width: 15rem;
     height: 0.4rem;
     border-radius: 1rem;
-    background: rgb(255, 123, 0);
-    outline: none;
+    background: var(--main-color);
+    outline: none; 
 
 }
 
@@ -147,4 +168,67 @@ body,html {
     background: white;
     filter: drop-shadow(0.2rem 0.2rem 0.5rem gray);
     cursor: pointer;
+}
+
+footer {
+    display: none;
+}
+
+/* #description { 
+    grid-area: main;
+    margin-top: 45rem;
+    margin-left: 3rem;
+    width: 20rem;
+    font-size: 1.5rem;
+} */
+
+@media only screen and (max-width: 600px) {
+
+    body,html {
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 10% 80% 10%;
+        width:100vw;
+        height: 100vh;
+        grid-template-areas: 
+        "header header" 
+        "main sidebar"
+        "footer footer";
+    }
+
+    #image {
+        display: none;
+    }
+
+    #header {
+        font-size: 1rem;
+        margin: 0rem;
+        text-align: center;
+        /* border-bottom: 0.2rem solid black; */
+    }
+
+    #info {
+        display:none;
+    }
+
+    .clock {
+        opacity: 0.8;
+    }
+
+    #noise {
+        /* justify-items: center; */
+        align-self:flex-start;
+        margin-top: 2.5rem;
+        margin-left: 2.5rem;
+    }
+
+    footer {
+        display: block;
+        text-align: center;
+        margin: 0;
+        /* border-top: 0.2rem solid black; */
+        padding: 0.4rem;
+        font-size: 1rem;
+        grid-area: footer;
+    }
 }

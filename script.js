@@ -22,19 +22,23 @@ setInterval(() => {
 
 // Mute/Unmute button
 
-let volumeButton = document.getElementById ("volume");
-let audio = document.querySelectorAll (".audio");
-// let audio = (audioKeyboard, audioSteps, audioWriting, audioWhispers, audioWater);
+let volumeButton = document.getElementById("volume");
+let audios = document.querySelectorAll(".audio");
+// let audios = (audiosKeyboard, audiosSteps, audiosWriting, audiosWhispers, audiosWater);
 
 volumeButton.addEventListener("click", mute);
 
 function mute(){
-    if(audio.muted){
-        audio.muted = false;
-        volumeButton.style.background = "url(images/unmute.png) no-repeat";
+    if(audios[0].muted){
+        // console.log("NOT MUTE")
+        audios.forEach(audio => audio.muted = false);
+        volumeButton.style.background = "url(images/unmute.png)";
+        volumeButton.style.backgroundSize = "cover";
     } else {
-        audio.muted = true;
-        volumeButton.style.background = "url(images/mute.png) no-repeat";
+        // console.log("MUTE")
+        audios.forEach(audio => audio.muted = true);
+        volumeButton.style.background = "url(images/mute.png)";
+        volumeButton.style.backgroundSize = "cover";
     }
 }
 
