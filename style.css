@@ -1,5 +1,4 @@
 body,html {
-    font-family: Helvetica, sans-serif;
     overflow: hidden;
     margin: 0;
     display: grid;
@@ -45,10 +44,9 @@ body,html {
     position: absolute;
     width: 1.5rem;
     height: 1.5em;
-    /* background: rgb(0, 0, 0); */
     background: rgb(255, 123, 0);
     border-radius: 50%;
-    z-index: 10;
+    z-index: 5;
 }
 
 .clock .hour,
@@ -117,26 +115,24 @@ body,html {
     grid-area: sidebar;
     align-self: center;
     font-family: bely, serif;
+    z-index: 10;
 }
 
 #volume {
+    /* border: none; */
+    background: url(images/unmute.png) no-repeat;
+    /* background-color: orange; */
+    /* margin-left: 12rem; */
     width: 2rem;
-}
-
-#mute {
-    border: none;
-    background: url('volume.png') no-repeat;
-    margin-left: 12rem;
-    
+    height: 2rem;
+    margin:5rem;
 }
 
 .slider {
-    /* filter: grayscale(100%); */
     -webkit-appearance: none;
     width: 15rem;
     height: 0.4rem;
     border-radius: 1rem;
-    /* background: rgb(88, 88, 88); */
     background: rgb(255, 123, 0);
     outline: none;
 
@@ -152,10 +148,3 @@ body,html {
     filter: drop-shadow(0.2rem 0.2rem 0.5rem gray);
     cursor: pointer;
 }
-
-/* 
-#footer {
-    grid-area: footer;
-    align-self: baseline;
-    border-top: 0.4rem solid black;
-} */
