@@ -188,6 +188,12 @@ footer {
         font-size: 1.5rem;
     }
 
+    #image {
+        /* margin-left: 2rem; */
+        /* margin-top: -7rem; */
+        width: 100vw;
+    }
+
     #info {
         margin-left: 3rem; 
     }
