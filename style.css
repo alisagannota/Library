@@ -131,7 +131,7 @@ body,html {
 #noise {
     font-size: 1.5rem;
     text-align: center;
-    margin-right: 4rem;
+    margin-right: 0rem;
     grid-area: sidebar;
     align-self:flex-end;
     font-family: bely, serif;
